@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Dashboard | Imoria Learning</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- 🌐 DASHBOARD HEADER -->
+    <header class="dash-header">
+        <div class="dash-nav">
+            <a href="index.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <h2 id="dashSubjectTitle">Chemistry - Part I</h2>
+            <div class="user-badge"><i class="fas fa-user-graduate"></i> FSc Student</div>
+        </div>
+    </header>
+
+    <!-- 🗂️ MAIN DASHBOARD CONTAINER -->
+    <div class="dash-container">
+        
+        <!-- 📑 LEFT SIDEBAR: CHAPTER LIST -->
+        <aside class="dash-sidebar">
+            <div class="sidebar-title">Syllabus Chapters</div>
+            <ul class="chapter-list" id="chapterListContainer">
+                <!-- Active class sets the initial highlighted chapter -->
+                <li class="chapter-item active" onclick="selectChapter(1, this)">
+                    <span class="ch-num">01</span>
+                    <span class="ch-name">Basic Concepts</span>
+                </li>
+                <li class="chapter-item" onclick="selectChapter(2, this)">
+                    <span class="ch-num">02</span>
+                    <span class="ch-name">Experimental Techniques</span>
+                </li>
+                <li class="chapter-item" onclick="selectChapter(3, this)">
+                    <span class="ch-num">03</span>
+                    <span class="ch-name">Gases</span>
+                </li>
+                <!-- More chapters can be populated dynamically -->
+            </ul>
+        </aside>
+
+        <!-- 📖 RIGHT CONTENT AREA -->
+        <main class="dash-content-area">
+            
+            <!-- 🎗️ MATERIAL TYPE TABS NAVIGATION -->
+            <div class="material-tabs">
+                <button class="tab-btn active" onclick="switchTab('notes', this)"><i class="fas fa-file-alt"></i> Premium Notes</button>
+                <button class="tab-btn" onclick="switchTab('short-qs', this)"><i class="fas fa-question-circle"></i> Short Qs</button>
+                <button class="tab-btn" onclick="switchTab('long-qs', this)"><i class="fas fa-scroll"></i> Long Qs</button>
+                <button class="tab-btn" onclick="switchTab('chapter-mcqs', this)"><i class="fas fa-tasks"></i> Practice MCQs</button>
+            </div>
+
+            <!-- 📥 DYNAMIC RESOURCE VIEWER DISPLAY -->
+            <div class="resource-display-card">
+                
+                <!-- SECTION A: PREMIUM NOTES -->
+                <div id="content-notes" class="tab-content active">
+                    <h3 class="content-heading">1.1 Introduction to Atom</h3>
+                    <p>An atom is the smallest particle of an element which can take part in a chemical reaction. Modern research has beautifully mapped its core properties using visual data tokens.</p>
+                    
+                    <!-- Premium Visual Flowchart Box -->
+                    <div class="premium-flowchart-box">
+                        <div class="flowchart-header"><i class="fas fa-project-diagram"></i> Concept Flowchart: Subatomic Framework</div>
+                        <div class="flowchart-visual">
+                            <!-- In real production, this can be an SVG or premium vector diagram -->
+                            <div class="flow-node gold-node">Atom Core</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-node">Nucleus (Protons + Neutrons)</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-node">Outer Shells (Electrons)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION B: SHORT QUESTIONS -->
+                <div id="content-short-qs" class="tab-content">
+                    <div class="qa-item">
+                        <span class="qa-badge">Q1 (Board Favorite)</span>
+                        <h4>Why do isotopes have identical chemical properties but different physical properties?</h4>
+                        <p><strong>Answer:</strong> Chemical properties depend on the atomic number (number of electrons and their configuration), which is identical for all isotopes of an element. Physical properties depend upon mass numbers, which are different due to varying numbers of neutrons.</p>
+                    </div>
+                </div>
+
+                <!-- SECTION C: LONG QUESTIONS -->
+                <div id="content-long-qs" class="tab-content">
+                    <div class="qa-item">
+                        <span class="qa-badge-long">Long Question Blueprint</span>
+                        <h4>Define yield. Differentiate between actual yield and theoretical yield. Why is actual yield often less than theoretical yield?</h4>
+                        <div class="topper-tip"><i class="fas fa-award"></i> Topper's Execution Tip: Always present differences in a clean, tabular structure to secure full marks.</div>
+                        
+                        <table class="premium-table">
+                            <thead>
+                                <tr>
+                                    <th>Theoretical Yield</th>
+                                    <th>Actual Yield</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>The amount of products calculated from the balanced chemical equation.</td>
+                                    <td>The amount of products actually obtained during an experimental reaction.</td>
+                                </tr>
+                                <tr>
+                                    <td>It is a theoretical/maximum value.</td>
+                                    <td>It is an experimental/practical value.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SECTION D: CHAPTER MCQS -->
+                <div id="content-chapter-mcqs" class="tab-content">
+                    <div class="practice-quiz-wrapper">
+                        <h4>Quick Concept Check Quiz</h4>
+                        <p class="quiz-intro">Test your memory before moving to the next chapter.</p>
+                        
+                        <div class="mini-mcq-card">
+                            <p class="mcq-question"><strong>Q1.</strong> The number of covalent bonds in one mole of water is:</p>
+                            <label class="mcq-option"><input type="radio" name="q1"> A) $6.02 \times 10^{23}$</label>
+                            <label class="mcq-option"><input type="radio" name="q1"> B) $1.204 \times 10^{24}$</label>
+                            <label class="mcq-option"><input type="radio" name="q1"> C) $3.01 \times 10^{23}$</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
