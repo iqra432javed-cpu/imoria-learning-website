@@ -45,8 +45,80 @@
             <p>Every subject is loaded with Premium Notes, Flowcharts, and Chapter-wise Short/Long Qs.</p>
         </div>
         
-        <div class="subjects-grid">
-            </div>
+       <!-- 📚 SUBJECTS GRID (Updated Content) -->
+<div class="subjects-grid">
+    
+    <!-- 1. PHYSICS CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('physics')">
+        <div class="card-icon-wrapper"><i class="fas fa-atom"></i></div>
+        <h3>Physics</h3>
+        <p>Mechanics, Thermodynamics, Optics & Modern Physics with premium visualizations.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- 2. CHEMISTRY CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('chemistry')">
+        <div class="card-icon-wrapper"><i class="fas fa-flask"></i></div>
+        <h3>Chemistry</h3>
+        <p>Organic, Inorganic & Physical Chemistry broken down into clear visual flowcharts.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- 3. BIOLOGY CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('biology')">
+        <div class="card-icon-wrapper"><i class="fas fa-dna"></i></div>
+        <h3>Biology</h3>
+        <p>High-fidelity anatomical diagrams, classification charts, and quick-revision maps.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- 4. MATHEMATICS CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('mathematics')">
+        <div class="card-icon-wrapper"><i class="fas fa-calculator"></i></div>
+        <h3>Mathematics</h3>
+        <p>Calculus, Algebra, and Trigonometry with systematic step-by-step toppers' solutions.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- 5. COMPUTER SCIENCE CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('computer-science')">
+        <div class="card-icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+        <h3>Computer Science</h3>
+        <p>Database management, C-Language algorithms, and modern networking notes.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- 6. ENGLISH CARD -->
+    <div class="subject-card" onclick="toggleSyllabusModal('english')">
+        <div class="card-icon-wrapper"><i class="fas fa-book-open"></i></div>
+        <h3>English</h3>
+        <p>Grammar essentials, structured essays, and precise context-based past paper solutions.</p>
+        <span class="card-action-text">Explore Resources <i class="fas fa-chevron-right"></i></span>
+    </div>
+
+</div>
+
+<!-- 🎴 DYNAMIC SYLLABUS SELECTOR MODAL (Popup Overlay) -->
+<div class="modal-overlay" id="syllabusModal">
+    <div class="modal-box">
+        <button class="modal-close-btn" onclick="toggleSyllabusModal()">&times;</button>
+        <h2 id="modalSubjectTitle">Select Academic Year</h2>
+        <p>Choose your academic volume to unlock premium notes and competitive test papers.</p>
+        
+        <div class="modal-options-wrapper">
+            <a href="#" id="part1Link" class="modal-opt-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Part I (11th Grade)</h4>
+                <p>Foundation curriculum with entry-test orientation.</p>
+            </a>
+            <a href="#" id="part2Link" class="modal-opt-card">
+                <i class="fas fa-award"></i>
+                <h4>Part II (12th Grade)</h4>
+                <p>Advanced curriculum with integrated high-achiever blueprints.</p>
+            </a>
+        </div>
+    </div>
+</div>
     </section>
 
 </body>
