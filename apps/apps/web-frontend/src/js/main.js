@@ -27,3 +27,29 @@ window.onclick = function(event) {
         modal.classList.remove('active');
     }
 }
+// FUNCTION FOR SWITCHING MATERIAL TABS (Notes, Short Qs, Long Qs, MCQs)
+function switchTab(tabKey, buttonElement) {
+    // 1. Remove active class from all tab contents
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+    
+    // 2. Remove active class from all tab buttons
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // 3. Activate current tab content and button
+    document.getElementById(`content-${tabKey}`).classList.add('active');
+    buttonElement.classList.add('active');
+}
+
+// FUNCTION FOR SIDEBAR CHAPTER SELECTION
+function selectChapter(chapterNum, element) {
+    const chapters = document.querySelectorAll('.chapter-item');
+    chapters.forEach(ch => ch.classList.remove('active'));
+    
+    element.classList.add('active');
+    
+    // In real enterprise application, this will trigger an API fetch 
+    // to update the content dynamically based on the chapter selected.
+    console.log(`Chapter ${chapterNum} loaded successfully.`);
+}
