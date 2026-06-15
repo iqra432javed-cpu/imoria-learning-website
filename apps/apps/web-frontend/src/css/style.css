@@ -38,3 +38,97 @@ a {
     text-decoration: none;
     color: inherit;
 }
+/* 🌐 HEADER STYLING */
+.main-header {
+    background-color: var(--bg-navy-light);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    height: 45px; /* Perfect balance for top header */
+    object-fit: contain;
+}
+.nav-links a {
+    color: var(--text-muted-gray);
+    margin: 0 1.5rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold-primary);
+}
+
+/* 🔱 HERO SECTION STYLING */
+.hero-section {
+    padding: 10rem 2rem 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 85vh;
+}
+.hero-content {
+    max-width: 800px;
+}
+.badge-premium {
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-top: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.highlight-gold {
+    color: var(--gold-primary);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+.hero-subtitle {
+    color: var(--text-muted-gray);
+    font-size: 1.15rem;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+/* BUTTONS */
+.btn-gold-solid {
+    background-color: var(--gold-primary);
+    color: var(--bg-navy-deep);
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+.btn-gold-solid:hover {
+    background-color: var(--gold-glow);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+.btn-navy-solid {
+    background-color: var(--bg-navy-light);
+    color: var(--text-pure-white);
+    padding: 0.8rem 2rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    margin-left: 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: var(--transition-smooth);
+}
+.btn-navy-solid:hover {
+    border-color: var(--gold-primary);
+}
